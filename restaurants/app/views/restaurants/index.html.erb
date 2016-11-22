@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <h2>All Restaurants</h2>
+</div>
+<% @restaurants.each do |restaurant| %>
+  <p>
+    <%= link_to "#{restaurant.name}", restaurant_path(restaurant), remote: true %>
+  </p>
+  <div id="restaurant-<%= restaurant.name %>" style="display:none;"></div>
+<% end %>
+
+<%= link_to 'New', new_restaurant_path %>

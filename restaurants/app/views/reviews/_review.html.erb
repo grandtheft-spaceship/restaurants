@@ -1,0 +1,6 @@
+<p >
+  <span><%= review.body %></span>
+  <span><%= link_to 'edit', edit_restaurant_review_path(@restaurant, review) %></span>
+  <span><%= link_to 'delete', restaurant_review_path(@restaurant, review), method: :delete, data: { confirm: 'Reaaally?' } %></span>
+</p>
+
